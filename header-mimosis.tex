@@ -1,5 +1,3 @@
-\documentclass{mimosis}
-
 \usepackage{metalogo}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -30,13 +28,13 @@
 % Hyperlinks & bookmarks
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage[%
+\hypersetup{%
   colorlinks = true,
   citecolor  = RoyalBlue,
   linkcolor  = RoyalBlue,
   urlcolor   = RoyalBlue,
-  unicode,
-  ]{hyperref}
+  % unicode, % cannot only be set as package option
+}
 
 \usepackage{bookmark}
 
@@ -68,13 +66,13 @@
 % Fonts
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ifxetexorluatex
-  \setmainfont{Minion Pro}
-\else
-  \usepackage[lf]{ebgaramond}
-  \usepackage[oldstyle,scale=0.7]{sourcecodepro}
-  \singlespacing
-\fi
+% \ifxetexorluatex
+%   \setmainfont{Minion Pro}
+% \else
+%   \usepackage[lf]{ebgaramond}
+%   \usepackage[oldstyle,scale=0.7]{sourcecodepro}
+%   \singlespacing
+% \fi
 
 \renewcommand{\th}{\textsuperscript{\textup{th}}\xspace}
 
@@ -101,36 +99,36 @@
 % Incipit
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{\texttt{latex-mimosis}}
-\subtitle{A minimal, modern \LaTeX{} package for typesetting your thesis}
-\author{Bastian Rieck}
-
-\begin{document}
-
-\frontmatter
-  \include{Sources/Title}
-  \include{Sources/Abstract}
-
-  \tableofcontents
-
-\mainmatter
-
-  \include{Sources/Introduction}
-
-% This ensures that the subsequent sections are being included as root
-% items in the bookmark structure of your PDF reader.
-\bookmarksetup{startatroot}
-\backmatter
-
-  \begingroup
-    \let\clearpage\relax
-    \glsaddall
-    \printglossary[type=\acronymtype]
-    \newpage
-    \printglossary
-  \endgroup
-
-  \printindex
-  \printbibliography
-
-\end{document}
+% \title{\texttt{latex-mimosis}}
+% \subtitle{A minimal, modern \LaTeX{} package for typesetting your thesis}
+% \author{Bastian Rieck}
+%
+% \begin{document}
+%
+% \frontmatter
+%   \include{Sources/Title}
+%   \include{Sources/Abstract}
+%
+%   \tableofcontents
+%
+% \mainmatter
+%
+%   \include{Sources/Introduction}
+%
+% % This ensures that the subsequent sections are being included as root
+% % items in the bookmark structure of your PDF reader.
+% \bookmarksetup{startatroot}
+% \backmatter
+%
+%   \begingroup
+%     \let\clearpage\relax
+%     \glsaddall
+%     \printglossary[type=\acronymtype]
+%     \newpage
+%     \printglossary
+%   \endgroup
+%
+%   \printindex
+%   \printbibliography
+%
+% \end{document}
