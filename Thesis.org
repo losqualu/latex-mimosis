@@ -1,7 +1,7 @@
 #+options: ':t *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline author:t
 #+options: broken-links:nil c:nil creator:nil d:(not "LOGBOOK") date:t e:t
 #+options: email:nil f:t inline:t num:t p:nil pri:nil prop:nil stat:t tags:t
-#+options: tasks:t tex:t timestamp:t title:t toc:t todo:t |:t
+#+options: tasks:t tex:t timestamp:t title:t toc:nil todo:t |:t
 #+title: Thesis
 #+date: \today
 #+author: Paul Haider
@@ -14,4 +14,38 @@
 #+latex_header: \input{header-mimosis.tex}
 #+latex_compiler: lualatex
 
-* Main
+
+# Incipit
+
+# \title{\texttt{latex-mimosis}}
+# \subtitle{A minimal, modern \LaTeX{} package for typesetting your thesis}
+# \author{Bastian Rieck}
+
+\frontmatter
+# \include{Sources/Title}
+\include{Sources/Abstract}
+
+\tableofcontents
+
+\mainmatter
+
+* Org stuff
+
+\include{Sources/Introduction}
+
+
+# This ensures that the subsequent sections are being included as root
+# items in the bookmark structure of your PDF reader.
+\bookmarksetup{startatroot}
+\backmatter
+
+\begingroup
+\let\clearpage\relax
+\glsaddall
+\printglossary[type=\acronymtype]
+\newpage
+\printglossary
+\endgroup
+
+\printindex
+\printbibliography
