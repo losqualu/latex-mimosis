@@ -29,7 +29,7 @@
 
 \mainmatter
 
-* Org stuff
+* Org-mode
 
 \include{Sources/Introduction}
 
