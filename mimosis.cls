@@ -1,9 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{mimosis}[2017/08/01 Minimal modern thesis class]
 
-\LoadClass[paper=a4,
-           twoside,
-           pagesize,
+\LoadClass[twoside,
            11pt,
            DIV=10,                % TODO: Make configurable
            BCOR=10mm,             % TODO: Make configurable
@@ -39,6 +37,7 @@
 % in the list, please ensure that `english` is the last one. The last
 % language is used to control standard hyphenation.
 \usepackage{polyglossia}
+\usepackage{microtype}
 \setmainlanguage{english}
 \setotherlanguage{german}
 
